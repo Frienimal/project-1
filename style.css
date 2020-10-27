@@ -1,0 +1,123 @@
+/* *
+{
+    outline: solid red 1px;
+} */
+body {
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f3f4;
+    display: grid;
+    grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 1fr 1fr 1fr;
+  }
+
+  
+  #navbar {
+    overflow: hidden;
+    background-color: #48cae4;
+  }
+  
+  #navbar a {
+    float: right;
+    display: block;
+    color: #f0efeb;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #navbar a:hover {
+    background-color: #90e0ef;
+    color: #393e41;
+  }
+  
+ 
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  .slideshow-container {
+      grid-row: 1/5;
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  .mySlides {
+    grid-row: 1/6;
+    display: none;
+    background-color: #48cae3;
+    padding: 80px;
+    text-align: left;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  /* .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  
+  /* The dots/bullets/indicators */
+  /* .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  } */
+   */
+  /* Add a background color to the active dot/circle */
+  /* .active, .dot:hover {
+    background-color: #717171;
+  }
+   */
+  /* Add an italic font style to all quotes */
+  q {font-style: ,montesarrat;}
+  
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+ 
