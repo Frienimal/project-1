@@ -1,94 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Frienimal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Frienimal</title>
 </head>
 <body>
-    
-      <div id="navbar">
-        <a href="javascript:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i> Contact us</a>
-        <a href="javascript:void(0)"><i class="fa fa-gift" aria-hidden="true"></i> Accessories</a>
-        <a href="javascript:void(0)"><i class="fa fa-paw" aria-hidden="true"></i> Pets</a>
-        <a href="javascript:void(0)"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login/Sign up</a>
-        <a href="javascript:void(0)"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-      </div>
-      
-      <div class="slideshow-container-homepage">
+  
+<div class="topnav" id="myTopnav">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  <a href="#login"><i class="fa fa-user" aria-hidden="true"></i> Login/Sign up</a>
+  <a href="#acc"><i class="fa fa-gift" aria-hidden="true"></i> Accessories</a>
+  <a href="#pet"><i class="fa fa-paw" aria-hidden="true"></i> Pets</a>
+  <a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
+  <a href="#home"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+  </a>
+</div>
 
-        <!-- Full-width slides/quotes -->
-        <div class="mySlides">
-          <q>People that say "money can't buy happiness", </br>
-               have never paid adoption fee. </q>
-          <p class="author">- </p>
-        </div>
-      
-        <div class="mySlides">
-          <q>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam harum fuga vitae ipsam ab, explicabo quia consectetur quisquam repellat molestias alias dolor! Dignissimos amet ad odit illo reiciendis iusto quo?</q>
-          <p class="author">- Tanya</p>
-        </div>
-      
-        <div class="mySlides">
-          <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A repellat natus magni illo perferendis, dolorem officia non dolorum maxime minus molestias aperiam reprehenderit, aliquam et, voluptatibus impedit amet odit. Provident!</q>
-          <p class="author">- Tanya</p>
-        </div>
-      
-        <!-- Next/prev buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      
-      <!-- Dots/bullets/indicators -->
-      <!-- <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div> -->
-      <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+<div class="container">
+  <div class="text"><p>Unconditional Love is as close as<br>your nearest Shelter</p> </div>
+ <div class="catimage"><img src="/img/cat1.png" alt="" width="300" height="auto" id="cat"/>
+</div>
+</div>
+<div class="custom-shape-divider-bottom-1603808544">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+  </svg>
+</div>
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
     }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}        
-</script>
-
-       
+  }
+  </script>
 </body>
 </html>
