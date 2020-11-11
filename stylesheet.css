@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: solid red 2px; */
+}
+
+body
+{
+    background: #E5E6FF;
+    min-height: 600vh;
+}
+
+nav
+{
+    position: fixed;
+    width: 100%;
+     padding:10px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#48bfe3  ;
+    transition: 0.5s;
+    align-items: center;
+    
+
+}
+
+ 
+nav .logoimg
+{
+   
+    position: relative;
+    max-width: 80px;
+    padding-left: 10px;
+    
+}
+nav .logoname
+{
+    position: relative;
+    color: #5e60ce;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 2px;
+    text-decoration: none; 
+    font-family: 'Big Shoulders Inline Display', cursive;
+    font-family: 'Dancing Script', cursive;
+    padding-right: 120px;
+}
+nav a:hover
+{
+    color: #ffa62b;
+}
+
+nav ul
+{
+    float:right;
+    margin: 0%;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    line-height: 80px;
+    color: #f1faee ;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+nav ul li a:hover
+{
+    color:#7400b8;
+    transition: 0.1s;
+}
+
+
+
+.content
+{
+    
+    width: 100%;
+    height:100vh;
+    background-color: #56cfe1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    
+}
+.content .textbox
+{
+    position: relative;
+    max-width: 600px;
+    padding-left:40px;
+    font-size: 20px;
+    justify-content: space-between;
+    font-family: 'Big Shoulders Inline Display', cursive;
+font-family: 'Dancing Script', cursive;
+
+}
+.content .textbox h2
+{
+    color: rebeccapurple;
+    font-family: 'Big Shoulders Inline Display', cursive;
+}
+.content .imgbox
+{
+    width: 600px;
+    display: flex;
+    padding-left: 50px;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.content .imgbox .img
+{
+    float: left;
+    max-width: 300px;
+}
+
+.content .imgbox .cat
+{
+    float: left;
+    max-width: 300px;
+}
+.content .imgbox .dog
+{
+    float: left;
+    max-width: 500px;
+    padding-bottom: 20%;
+    padding-left: 40%;
+
+}
+
