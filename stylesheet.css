@@ -13,6 +13,10 @@ body
 {
     background: #E5E6FF;
     min-height: 600vh;
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+
 }
 
 nav
@@ -121,6 +125,7 @@ nav ul li a:hover
     margin-top: 20px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+    
 }
 .content .textbox h2
 {
@@ -159,3 +164,47 @@ nav ul li a:hover
 
 }
 
+/* Features section */
+
+#features {
+
+    padding: 7% 15%;
+    background-color: #E5E6FF;;
+    position: relative;
+    
+
+  }
+
+.images {
+
+    margin: 1rem 3.5rem 0;
+    height: 55%;
+    width: 65%;
+
+}
+
+h3 {
+
+    text-align: center;
+    font-family: "Montserrat"
+
+}
+
+.images {
+
+    margin-bottom: 1rem;
+
+}
+
+.images-1{
+    
+    margin: 3.4rem 0.5rem 1rem 7rem;
+    height: 45%;
+    width: 35%;
+    
+}
+
+.p1 {
+    text-align: center;
+    color: #8f8f8f;
+}
