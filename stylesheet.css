@@ -270,7 +270,7 @@ h1 {
    
 }
 
-p {
+.description {
     margin-top: 0;
     margin-bottom: 1rem;
     display: block;
@@ -312,6 +312,10 @@ p {
 
     background-color: #ffebee;
 
+}
+
+.card-text{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Footer */
