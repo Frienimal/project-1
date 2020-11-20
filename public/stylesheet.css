@@ -175,15 +175,19 @@ nav ul li a:hover
 #features {
 
     padding: 7% 10%;
-    background-color: #E5E6FF;;
-    position: relative;
     
+    position: relative;
+   
+    
+   
+    background: linear-gradient(to bottom right, #ffb3fc 40%, #fff6bd 89%);
+
 
   }
 
 .images {
 
-    margin: 1rem 3.5rem 0;
+    margin: 1rem 3.5rem 0 4.2rem;
     height: 55%;
     width: 65%;
 
@@ -204,7 +208,7 @@ h3 {
 
 .images-1{
     
-    margin: 3.4rem 0.5rem 1rem 7rem;
+    margin: 3.4rem 0.5rem 1rem 7.8rem;
     height: 45%;
     width: 35%;
     
@@ -212,7 +216,7 @@ h3 {
 
 .p1 {
     text-align: center;
-    color: #8f8f8f;
+    color: #333;
 }
 
 /* PEt-cards */
