@@ -156,15 +156,15 @@ nav ul li a:hover
   width:800px !important;
   height: inherit;
   z-index: 2;
-  border-radius: 40px;
+  border-radius: 30px;
 }
 .carousel-item{
     width: 700px !important ;
     height: inherit;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 .frame{
-    box-shadow: 1px 2px 5px 10px #4267B2;
+    box-shadow: 0px 2px 5px 10px #01010a00;
     border-radius: 30px;
     right:105px;
     bottom: 35px;
