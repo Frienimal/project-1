@@ -1,3 +1,8 @@
+var snapshot;
+db.collection('PetForm').get().then((Snapshot) => {
+  console.log(snapshot.docs);
+})
+
 document.addEventListener("DOMContentLoaded", event => {
   const app = firebase.app();
 

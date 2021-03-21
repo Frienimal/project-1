@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Frienimal</title>
 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.0.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -357,12 +360,32 @@
       );
   });
 </script>
-<script src='app.js'>
 
+
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+            authDomain: "frienimal.firebaseapp.com",
+            databaseURL: "https://frienimal.firebaseio.com",
+            projectId: "frienimal",
+            storageBucket: "frienimal.appspot.com",
+            messagingSenderId: "264888471735",
+            appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+            measurementId: "G-4BGZRKHGG6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        const db = firebase.firestore()
+        db.settings({ timestampsInSnapshots: true})
 </script>
 
- 
-
+<script src='app.js'></script>
 
   </body>
 </html>
