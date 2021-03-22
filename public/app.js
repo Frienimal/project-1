@@ -1,14 +1,8 @@
-var snapshot;
 db.collection('PetForm').get().then((Snapshot) => {
-  console.log(snapshot.docs);
-})
-
-document.addEventListener("DOMContentLoaded", event => {
-  const app = firebase.app();
-
-  const db = firebase.firestore();
-  console.log(app)
+  console.log(Snapshot.docs);
 });
+
+
 
 //Google Login
 
