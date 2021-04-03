@@ -107,3 +107,30 @@ function signup(){
    form.email.value = '';
  })
 }
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+    authDomain: "frienimal.firebaseapp.com",
+    databaseURL: "https://frienimal.firebaseio.com",
+    projectId: "frienimal",
+    storageBucket: "frienimal.appspot.com",
+    messagingSenderId: "264888471735",
+    appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+    measurementId: "G-4BGZRKHGG6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+
+
+  function signUp(){
+		
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		
+		const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+		promise.catch(e => alert(e.message));
+		
+		alert("Signed Up");
+	}
+  

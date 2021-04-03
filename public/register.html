@@ -2,8 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Frienimal</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <!-- Below is the additional script for Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     
     <link
       rel="stylesheet"
@@ -17,9 +22,10 @@
       crossorigin="anonymous"
     />
    
-   
+    <script src="app.js"></script>
   </head>
   <body>
+    
 
     <div class="container">
       <div class="row">
@@ -33,8 +39,8 @@
             <label for="password">Enter password: </label><br>
             <input type="password" id="pwd" name="password1" >
             <label for="password">Reenter password: </label><br>
-            <input type="password" id="pwd" name="password2">
-            <input type="submit" value="Submit">
+            <input type="password" id="pwd1" name="password2">
+            <button onclick = "signUp()" id="signUp">Sign Up</button>
   
           </form>
           <p>Already have an account? <a href="login.html">Log In</a></p>
@@ -74,5 +80,9 @@
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+
+   
+    
+    
   </body>
 </html>
