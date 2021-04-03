@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
     /* border: solid red 2px; */
 }
 
@@ -56,6 +57,23 @@ header {
     font-size: 20px;
     letter-spacing: 2px;
 }
+#logo1{
+    width: 9%;
+    margin-top: -9px;
+    top: 0;
+    height: 12vh;
+}
+h6{
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    border: 1 px solid rgb(255, 147, 6);
+    /* background-color: rgb(255, 147, 6); */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 40px;
+    margin-top: -5px;
+}
 
 nav {
     position: fixed;
@@ -66,6 +84,7 @@ nav {
 }
 
 nav ul {
+    margin-top: 10px;
     line-height: 60px;
     list-style: none;
     background: rgba(0, 0, 0, 0);
@@ -79,7 +98,8 @@ nav ul {
 }
 
 nav.black ul {
-    background: #000;
+    background: #08090a;
+    color: #ffa000;
 }
 
 nav ul li {
@@ -89,8 +109,10 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
+    color: #ff6308;
+    border-bottom: 5px solid #ff6308;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .menu-icon {
