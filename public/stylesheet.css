@@ -21,7 +21,7 @@ body
 
 nav
 {
-    position: fixed;
+    position: absolute;
     width: 100%;
     padding:3px 10px;
     display: flex;
@@ -30,14 +30,8 @@ nav
     opacity: 1;
     transition: 0.5s;
     align-items: center;
-    z-index: 4;
-  
-    
-    
-
-}
-
- 
+    z-index: 5;
+} 
 nav .logoimg
 {
    
@@ -67,7 +61,7 @@ nav a:hover
 nav ul
 {
     
-
+    z-index: 5;
     float:right;
     margin: 0%;
     padding: 0;
@@ -77,11 +71,11 @@ nav ul
 nav ul li
 {
     list-style: none;
-    
+    z-index: 5;
 }
 nav ul li a
 {
-    
+    z-index: 5;
     display: block;
     line-height: 80px;
     color: #e3f2fd;
@@ -99,9 +93,6 @@ nav ul li a:hover
     color:#012a4a;
     transition: 0.1s;
 }
-
-
-
 .content
 {
     
@@ -111,8 +102,7 @@ nav ul li a:hover
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #351dbd ;
-    
+    color: #351dbd ;    
 }
 .content .textbox 
 {
@@ -122,14 +112,12 @@ nav ul li a:hover
     font-size: 20px;
     justify-content: space-between;
     width: 480px;
-
 }
 .content .textbox p
 {
     margin-top: 20px;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;   
 }
 .content .textbox h2
 {
@@ -197,20 +185,13 @@ nav ul li a:hover
     bottom: 37px;
 }
  
-
 /* Features section */
 
 #features {
 
-    padding: 7% 10%;
-    
-    position: relative;
-   
-    
-   
+    padding: 7% 10%;   
+    position: relative;   
     background: linear-gradient(to bottom right, #ffb3fc 40%, #fff6bd 89%);
-
-
   }
 
 .images {
@@ -629,5 +610,5 @@ html,body{
   margin-left: 2rem;
 }
 
-/* Reviews */
+ 
 
