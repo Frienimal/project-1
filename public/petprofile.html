@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pet Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="footer.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12">
+          <a href="index.html">
+            <img
+              src="img/logo_final.png"
+              alt="logo"
+              height="200px"
+              width="200px"
+            />
+          </a>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <h1>Title</h1>
+          <span class="badge bg-primary">City</span>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <img src="img/husky.jpg" alt="dog-img" height="250px" width="250px" />
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="container-fluid row">
+            <div class="col-lg-6 col-xs-6">
+              <h5>Breed :</h5>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h6>Siberian Husky</h6>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h5>Vaccinated :</h5>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h6>Yes</h6>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h5>Description :</h5>
+            </div>
+
+            <div class="col-lg-6 col-xs-6">
+              <h6>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates quis ab commodi illo quae sed iure accusamus
+                exercitationem repellendus ex? Reiciendis deleniti perferendis
+                tenetur explicabo quisquam inventore sunt unde similique!
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="container-fluid row">
+            <div class="col-xs-12 col-lg-12">
+              <button type="button" class="btn btn-primary">
+                <i class="bi bi-telephone"></i> Contact :
+                <a href="tel">8828456798</a>
+              </button>
+            </div>
+            <br />
+            <br />
+            <div class="col-xs-12 col-lg-12">
+              <button type="button" class="btn btn-success">
+                Contact through mail
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <section>
+      <div class="footer-container">
+        <div class="footer">
+          <img class="footer-logo" src="img\logo_final.png" alt="" />
+          <div class="tag">
+            <h1 class="logoname1">Frienimal</h1>
+            <p class="tagline">Adopt a Forever Friend today!</p>
+          </div>
+          <div class="footer-heading footer-1">
+            <h2>About us</h2>
+            <a href="#">BLOG</a>
+            <a href="#">Contributors</a>
+            <a href="#">Foster Homes</a>
+            <a href="#">Terms of service</a>
+          </div>
+
+          <div class="footer-heading footer-2">
+            <h2>Contact us</h2>
+            <a href="#">Jobs</a>
+            <a href="#">Support</a>
+            <a href="#">Sponsorships</a>
+          </div>
+
+          <div class="footer-email-form" id="signup">
+            <h2>Join our newsletter</h2>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              id="footer-email"
+            />
+            <input
+              type="Submit"
+              value="Sign Up"
+              onclick="signup()"
+              id="footer-email-btn"
+            />
+
+            <br /><br />
+
+            <div class="wrapper">
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <span>Twitter</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <span>YouTube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+        authDomain: "frienimal.firebaseapp.com",
+        databaseURL: "https://frienimal.firebaseio.com",
+        projectId: "frienimal",
+        storageBucket: "frienimal.appspot.com",
+        messagingSenderId: "264888471735",
+        appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+        measurementId: "G-4BGZRKHGG6",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
