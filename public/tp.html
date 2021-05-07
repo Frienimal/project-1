@@ -38,30 +38,38 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="footer.css">
+
     <style>
       .forms-out {
         margin: 0 ;
         font-family: "Fira Sans", sans-serif;
-        padding: 20px 4px0;
+        padding: 20px 40px;
         margin-top: 200px;
         display: block;
       }
       .forms-in {
         width: 93%;
         margin: 0 auto;
-        color: white;
+        color: #590219 ;
         padding: 15px 0;
       }
       .forms-in div {
         padding: 30px 20px;
         max-width: 350px;
         margin: 0 auto;
-        background: #168ab8;
+       
         border-radius: 5px;
         margin-bottom: 15px;
       }
       .forms-in h3 {
         text-align: center;
+      }
+      input{
+        border: 1px solid #590219;
+        border-radius: 10px;
+        background-color: #ce8c9e;
+        color: #590219;
       }
       .forms-in input {
         border: none;
@@ -75,8 +83,8 @@
       .forms-in button {
         border: none;
         padding: 7px 20px;
-        background: #e8f8ff;
-        color: #168ab8;
+        background: #ce8c9e;
+        color: #590219;
         border-radius: 4px;
         cursor: pointer;
         font-weight: bold;
@@ -147,6 +155,77 @@
       </div>
       <div class="col-lg-6 col-xs-12 d-none d-sm-block" style="background-color:#590219"></div>
     </div>
+     <!-- Footer -->
+     <section>
+      <div class="footer-container">
+        <div class="footer">
+          <img class="footer-logo" src="img\logo_final.png" alt="" />
+          <div class="tag">
+            <h1 class="logoname1">Frienimal</h1>
+            <p class="tagline">Adopt a Forever Friend today!</p>
+          </div>
+          <div class="footer-heading footer-1">
+            <h2>About us</h2>
+            <a href="#">BLOG</a>
+            <a href="#">Contributors</a>
+            <a href="#">Foster Homes</a>
+            <a href="#">Terms of service</a>
+          </div>
+
+          <div class="footer-heading footer-2">
+            <h2>Contact us</h2>
+            <a href="#">Jobs</a>
+            <a href="#">Support</a>
+            <a href="#">Sponsorships</a>
+          </div>
+
+          <div class="footer-email-form" id="signup">
+            <h2>Join our newsletter</h2>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              id="footer-email"
+            />
+            <input
+              type="Submit"
+              value="Sign Up"
+              onclick="signup()"
+              id="footer-email-btn"
+            />
+
+            <br /><br />
+
+            <div class="wrapper">
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <span>Twitter</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <span>YouTube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
