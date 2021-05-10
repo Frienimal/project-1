@@ -1,0 +1,15 @@
+*{
+    /* background-color: #e4e4e4; */
+}
+#add-pet-field{
+    border: 2px solid #590219;
+    display: flex;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+#add-pet-filed:focus{
+    outline: none !important;
+    border-radius: 20px;
+    border: none !important;
+}
