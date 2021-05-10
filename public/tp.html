@@ -41,11 +41,12 @@
     <link rel="stylesheet" href="footer.css">
 
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
       .forms-out {
         margin: 0 ;
         font-family: "Fira Sans", sans-serif;
         padding: 20px 40px;
-        margin-top: 200px;
+        margin-top: 100px;
         display: block;
       }
       .forms-in {
@@ -63,12 +64,17 @@
         margin-bottom: 15px;
       }
       .forms-in h3 {
+        color: #212529;
+        font-family: 'Pangolin',cursive;
+        font-size: 2.5rem;
+        font-weight: bold;
         text-align: center;
+        margin-top: 30px;
+        margin-bottom: 35px;
       }
       input{
-        border: 1px solid #590219;
         border-radius: 10px;
-        background-color: #ce8c9e;
+        
         color: #590219;
       }
       .forms-in input {
@@ -77,14 +83,16 @@
         margin-bottom: 15px;
         padding: 10px;
         box-sizing: border-box;
+        border: 1px solid #590219;
+
         border-radius: 3px;
       }
 
       .forms-in button {
         border: none;
         padding: 7px 20px;
-        background: #ce8c9e;
-        color: #590219;
+        background: #f7913e;
+        color: #000;
         border-radius: 4px;
         cursor: pointer;
         font-weight: bold;
@@ -100,8 +108,9 @@
 
       #forgot-password {
         text-align: center;
-        font-size: 13px;
+        font-size: 18px;
         cursor: pointer;
+        color: #212529;
       }
 
       #forgot-password:hover {
@@ -111,6 +120,13 @@
         height: 100vh;
         width: 100vw;
         
+      }
+
+      #loginimg{
+        width: 400px;
+        height: 400px;
+        margin-left: 25%;
+        margin-top: 20%;
       }
     </style>
   </head>
@@ -153,7 +169,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-xs-12 d-none d-sm-block" style="background-color:#590219"></div>
+      <div class="col-lg-6 col-xs-12 d-none d-sm-block" style="background-color:#590219">
+        <img src="img/login.png" alt="login" id="loginimg">
+      </div>
     </div>
      <!-- Footer -->
      <section>

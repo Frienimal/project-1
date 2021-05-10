@@ -1,7 +1,11 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
 header {
     width: 100%;
     height: 100vh;
     top: 0;
+    z-index: 4;
   }
   
   .content {
@@ -28,17 +32,6 @@ header {
     top: 0;
     height: 12vh;
   }
-  h6 {
-    display: inline;
-    text-decoration: none;
-    color: #fff;
-    border: 1 px solid rgb(255, 147, 6);
-    /* background-color: rgb(255, 147, 6); */
-    font-size: 20px;
-    font-weight: bold;
-    padding: 16px 40px;
-    margin-top: -5px;
-  }
   
   nav {
     position: fixed;
@@ -63,9 +56,24 @@ header {
   }
   
   nav.black ul {
-    background: #08090a;
-    color: #ffa000;
+    background: #212529;
+    color: #F7931E;
+    text-transform: uppercase;
+    border-bottom: 5px solid #F7931E;
   }
+
+  nav.black ul li a{
+    border-bottom: none;
+  }
+  nav.black ul li a:hover{
+    border-bottom: 5px solid #F7931E;
+    transition: .5s ease;
+    transform: translateX(-50%,50%);
+  }
+  nav.black ul li a:active{
+    border-bottom: 5px solid #F7931E;
+  }
+  
   
   nav ul li {
     display: inline-block;
@@ -74,10 +82,19 @@ header {
   
   nav ul li a {
     text-decoration: none;
-    color: #ff6308;
-    border-bottom: 5px solid #ff6308;
-    font-size: 20px;
+    color: #F7931E;
+    /* border-bottom: 5px solid #F7931E; */
+    font-size: 1.5rem;
     font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  nav ul li a:hover{
+    color: #F7931E;
+    text-decoration: none;
+    /* border-bottom: 5px solid #F7931E; */
+    /* transition: .5s ease; */
+    cursor: pointer;
   }
   
   .menu-icon {

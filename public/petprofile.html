@@ -39,8 +39,10 @@
     />
 
     <link rel="stylesheet" href="footer.css" />
-
-    <style></style>
+    <link rel="stylesheet" href="petprofile.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+  </style>
   </head>
   <body>
     <div class="container-fluid">
@@ -50,43 +52,42 @@
             <img
               src="img/logo_final.png"
               alt="logo"
-              height="200px"
-              width="200px"
+              id="logo"
             />
           </a>
         </div>
         <div class="col-lg-6 col-xs-12">
-          <h1>Title <h2><span class="badge bg-primary">City, State</span></h2></h1>
+          <h1 id="pname">Title <h2><span class="badge">City, State</span></h2></h1>
         </div>
         <div class="col-lg-6 col-xs-12">
-          <img src="img/husky.jpg" alt="dog-img" height="250px" width="250px" />
+          <img src="img/husky.jpg" alt="dog-img" id="dog-img"/>
         </div>
-        <div class="col-lg-6 col-xs-12">
+        <div class="col-lg-6 col-xs-12" id="dog-info">
           <div class="container-fluid row">
             <div class="col-lg-6 col-xs-6">
-              <h5>Gender :</h5>
+              <h5 id="heading">Gender :</h5>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h6>Male</h6>
+              <h6 id ="gender">Male</h6>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h5>Breed :</h5>
+              <h5 id="heading">Breed :</h5>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h6>Siberian Husky</h6>
+              <h6 id="breed">Siberian Husky</h6>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h5>Vaccinated :</h5>
+              <h5 id="heading">Vaccinated :</h5>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h6>Yes</h6>
+              <h6 id="vacc">Yes</h6>
             </div>
             <div class="col-lg-6 col-xs-6">
-              <h5>Description :</h5>
+              <h5 id="heading">Description :</h5>
             </div>
 
             <div class="col-lg-6 col-xs-6">
-              <h6>
+              <h6 id="descr">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptates quis ab commodi illo quae sed iure accusamus
                 exercitationem repellendus ex? Reiciendis deleniti perferendis
@@ -99,18 +100,17 @@
           <div class="container-fluid row">
             <div class="col-xs-12 col-lg-12" style= "width: 6rem;">
               <div>
-                <h4>Owner's name : <span class="badge bg-danger">Parth</span></h4>
+                <h4 id="heading">Owner's name : <span class="badge bg-danger">Parth</span></h4>
               </div>
             </div>
             <div class="col-xs-12 col-lg-12">
-              <button type="button" class="btn btn-primary">
-                <i class="bi bi-telephone"></i> Contact :
-                <a href="tel">8828456798</a>
+              <button type="button" class="btn" id="button1">
+                8828456798
               </button>
             </div>
             <br />
-            <div class="col-xs-12 col-lg-12">
-              <button type="button" class="btn btn-success">
+            <div class="col-xs-12 col-lg-12" >
+              <button type="button" class="btn" id="button2">
                 Contact through mail
               </button>
             </div>

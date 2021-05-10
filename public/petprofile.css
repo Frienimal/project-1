@@ -1,0 +1,82 @@
+#logo{
+    height:200px;
+    width: 200px;
+}
+
+#dog-img{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    
+}
+
+#dog-info{
+    margin-top: -220px;
+}
+
+#heading{
+    margin-top: 24px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    color: #212529;
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#gender, #descr, #breed, #vacc{
+    margin-top: 27px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    color: #212529;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+@media  (max-width : 768px) {
+    #dog-info{
+        margin-top: 0;
+    }
+    
+}
+
+.badge{
+    background: #f7931e;
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    margin: 15px;
+}
+
+#pname{
+    font-family: 'Pangolin', cursive;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    color:#212529;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+ #button2{
+    margin: 25px;
+    width: 75%;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(226, 10, 10);
+
+}
+#button1{
+    margin: 25px;
+    width: 75%;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(79, 11, 143);
+
+}

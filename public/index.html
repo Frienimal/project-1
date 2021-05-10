@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Frienimal</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
@@ -36,6 +42,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -58,6 +69,7 @@
     <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
+   <a href="add-pet.html"><img src="img/solid-add.png" alt="add-icon" id="add"></a>
     <section>
       <header>
         <nav>
@@ -66,43 +78,75 @@
           </div>
           <div class="logo">
             <img id="logo1" src="img/logo_final.png" />
-           <a href="tp.html"><h6>Login</h6></a> 
           </div>
           <div class="menu">
             <ul>
               <li><a href="#">About</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Our Pets</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="blogs.html">Blog</a></li>
+              <li><a href="pets.html">Our Pets</a></li>
+              <li><a href="blogs.html">Contact</a></li>
+              <li><a href="tp.html">Login</a></li>
             </ul>
           </div>
         </nav>
       </header>
     </section>
-    <section id="about-us" style="z-index: 1;">
-      <div class="container-fluid row" style="color: black;">
-        <div class="col col-lg-6">
-          <div class="col-xs-12">
+    <!-- About us  -->
+    <section id="about-us" style="z-index: -1">
+      <div class="container-fluid row">
+        <div class="col-lg-6">
+          <div class="col-xs-12" id="about-title">
             <h2>About Us</h2>
           </div>
-          <div class="col-xs-12">
+          <div class="col-xs-12" id="about-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              natus odio at ab architecto veritatis minus id quas veniam,
-              voluptatum voluptas earum nihil aliquam praesentium, in dolorum
-              doloremque! Excepturi, rerum.
+              We are a group of engineers who just want to ease the process of
+              pet adoption by making it completely online and free. Animals
+              deserve care and love as well and we make sure to provide that to
+              them. We also want to educate and make people aware of the rising
+              cases of animal assaults in the country and remind every citizen
+              of their duty to protet the environment and everyone within it.
             </p>
           </div>
         </div>
-        <div class="col col-lg-6">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            vitae esse voluptatem ex temporibus quas molestiae, distinctio quis
-            quos eveniet maxime voluptas dolorem harum obcaecati quae vero
-            provident beatae enim?
-          </p>
+        <div class="col-lg-6" id="about-img">
+          <img src="img/dog in arms.png" alt="about-us-image" />
         </div>
+      </div>
+    </section>
+
+    <!-- Pets section  -->
+
+    <section>
+      <div class="container-fluid">
+        <div id="pets">
+          <h2>Our Pets</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-xs-12">
+            <a href="#" class="custom-card"></a>
+              <div class="card" id="dog-card">
+                <div  id="card-img-top" ><img src="img/beagle.jpg" id="img1"></div>
+                <div id="frLogo" ><img src="img/logo_final.png" alt="logo" id="imgLogo"></div>
+                <div class="card-body">
+                  <h5 class="card-title">Musko</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem accusamus porro, consequuntur illum labore reiciendis rerum, inventore dolore earum vitae explicabo sunt nemo. Nam, est! Similique fuga obcaecati at quod.</p>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs  -->
+
+    <section>
+      <div class="container-fluid" id="blogs">
+        <h2 id="blog-title">Our Blogs</h2>
+        <p id="blog-info">Rookie pet-owner? Worry not. We have a wide range of blogs to guide you with every piece of information related to pet ownership. Animals are like children, you have to be there for them and take care of them every step of the way. Head over to our blogs section to get to know more about pet grooming and management.</p>
+        <a href="blogs.html" class="btn btn-light" type="button" role="button" id="blog-button">Go to Blogs</a>
       </div>
     </section>
 

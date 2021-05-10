@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Authentication</title>
+    <title>Pets</title>
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
       rel="stylesheet"
@@ -38,125 +38,61 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="footer.css">
-
-    <style>
-      .forms-out {
-        margin: 0 ;
-        font-family: "Fira Sans", sans-serif;
-        padding: 20px 40px;
-        margin-top: 200px;
-        display: block;
-      }
-      .forms-in {
-        width: 93%;
-        margin: 0 auto;
-        color: #590219 ;
-        padding: 15px 0;
-      }
-      .forms-in div {
-        padding: 30px 20px;
-        max-width: 350px;
-        margin: 0 auto;
-       
-        border-radius: 5px;
-        margin-bottom: 15px;
-      }
-      .forms-in h3 {
-        text-align: center;
-      }
-      input{
-        border: 1px solid #590219;
-        border-radius: 10px;
-        background-color: #ce8c9e;
-        color: #590219;
-      }
-      .forms-in input {
-        border: none;
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        box-sizing: border-box;
-        border-radius: 3px;
-      }
-
-      .forms-in button {
-        border: none;
-        padding: 7px 20px;
-        background: #ce8c9e;
-        color: #590219;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-
-      .forms-in button:hover {
-        opacity: 0.7;
-      }
-
-      .hide {
-        display: none;
-      }
-
-      #forgot-password {
-        text-align: center;
-        font-size: 13px;
-        cursor: pointer;
-      }
-
-      #forgot-password:hover {
-        opacity: 0.7;
-      }
-      .col-lg-6 {
-        height: 100vh;
-        width: 100vw;
-        
-      }
-    </style>
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="nav1.css" />
+    <link rel="stylesheet" href="pets.css">
+    
   </head>
   <body>
-    <div class="container-fluid row">
-      <div class="col-lg-6 col-xs-12">
-        <div class="forms-out">
-          <div class="forms-in">
-            <div id="registration-page" class="hide">
-              <button id="show-login">Sign In</button>
-              <h3>Sign Up</h3>
-              Email <br />
-              <input type="email" id="registration-email" /><br />
-              Confirm Email <br />
-              <input
-                type="email"
-                id="registration-reemail"
-                autocomplete="disable"
-              /><br />
-              Password <br />
-              <input type="password" id="registration-password" /><br />
-              <center><button id="register">Sign Up</button></center>
-            </div>
+    <section>
+      <header>
+        <nav>
+          <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+          </div>
+          <div class="logo">
+            <a href="index.html"><img id="logo1" src="img/logo_final.png" /></a> 
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="blogs.html">Blog</a></li>
+              <li><a href="pets.html" >Our Pets</a></li>
+              <li><a href="blogs.html">Contact</a></li>
+              <li><a href="tp.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <!-- Pets  -->
 
-            <div id="login-page">
-              <button id="show-register">Sign Up</button>
-              <h3>Sign In</h3>
-              Email <br />
-              <input type="email" id="login-email" /><br />
-              Password <br />
-              <input type="password" id="login-password" /><br />
-              <p id="forgot-password">Forgot Password</p>
-              <center><button id="login">Sign In</button></center>
-            </div>
-
-            <div ahref="index.html" id="homepage" class="hide">
-              <button id="signout">Sign Out</button>
-              <h3>Logged In</h3>
-            </div>
+    <section>
+      <div class="container-fluid">
+        <div id="pets">
+          <h2>Our Pets</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-xs-12">
+            <a href="#" class="custom-card"></a>
+              <div class="card" id="dog-card">
+                <div  id="card-img-top" ><img src="img/beagle.jpg" id="img1"></div>
+                <div id="frLogo" ><img src="img/logo_final.png" alt="logo" id="imgLogo"></div>
+                <div class="card-body">
+                  <h5 class="card-title">Musko</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem accusamus porro, consequuntur illum labore reiciendis rerum, inventore dolore earum vitae explicabo sunt nemo. Nam, est! Similique fuga obcaecati at quod.</p>
+                </div>
+              </div>
+            </a>
+            
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-xs-12 d-none d-sm-block" style="background-color:#590219"></div>
-    </div>
-     <!-- Footer -->
-     <section>
+    </section>
+
+
+    <!-- Footer -->
+    <section>
       <div class="footer-container">
         <div class="footer">
           <img class="footer-logo" src="img\logo_final.png" alt="" />
