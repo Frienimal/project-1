@@ -73,7 +73,7 @@ body {
 #dog-card{
   width: 74%;
   margin-left: 15px;
-  height: 85vh;
+  height: 92vh;
   border: none;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
   z-index:-1;
@@ -139,7 +139,7 @@ body {
 
 #blogs{
   width: 94%;
-  height: 45vh;
+  height: 55vh;
   border: none;
   box-shadow: 0 0 30px #59021954;
   margin-top: 100px;
