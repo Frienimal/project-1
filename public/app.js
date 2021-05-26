@@ -1,3 +1,33 @@
+// const db = firebase.firestore();
+
+//Goog
+var firebaseConfig = {
+  apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+  authDomain: "frienimal.firebaseapp.com",
+  databaseURL: "https://frienimal.firebaseio.com",
+  projectId: "frienimal",
+  storageBucket: "frienimal.appspot.com",
+  messagingSenderId: "264888471735",
+  appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+  measurementId: "G-4BGZRKHGG6",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+var db = firebase.firestore();
+function signUp() {
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+
+  const promise = auth.createUserWithEmailAndPassword(
+    email.value,
+    password.value
+  );
+  promise.catch((e) => alert(e.message));
+
+  alert("Signed Up");
+}
+
 const PetInfo = document.querySelector("#Pet-info");
 const form2 = document.querySelector("#add-pets-form");
 
@@ -51,6 +81,29 @@ db.collection("PetForm").get().then((Snapshot) => {
   });
 
 //Saving Data
+function uploadImage(){
+  const ref = firebase.storage().ref()
+
+  const file = document.querySelector("#photo").files[0]
+
+  const name = new Date() + '-' + file.name
+
+  const metadata = {
+      contentType:file.type
+  }
+
+  const task = ref.child(name).put(file,metadata)
+
+  task
+  .then(snapshot => snapshot.ref.getDownloadURL())
+  .then(url => {
+      console.log(url)
+      alert("Image uploaded")
+      const image = document.querySelector('#image')
+      image.src = url
+  })
+}
+
 form2.addEventListener("submit", (e) => {
   e.preventDefault();
   db.collection("PetForm").add({
@@ -61,6 +114,7 @@ form2.addEventListener("submit", (e) => {
     Email: form2.Email.value,
     PhoneNo: form2.PhoneNo.value,
     PetResidence: form2.Resi.value,
+    Image:form2.Image.value
   });
   form2.Petname.value = '';
   form2.Type.value = '';
