@@ -8,10 +8,15 @@
   font-family: "Rubik", sans-serif;
 }
 
+html,
+body {
+  display: grid;
+}
+
 .footer-container {
   background-color: #212529;
   padding: 4rem 0 3rem 0;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .footer {
@@ -83,13 +88,6 @@
   background-color: #43a047;
   transition: all 0.3s ease-out;
 }
-
-
-html,
-body {
-  display: grid;
-}
-
 .wrapper .button {
   display: inline-block;
   height: 30px;
@@ -115,6 +113,24 @@ body {
   line-height: 30px;
   transition: all 0.3s ease-out;
 }
+.wrapper .button .icon img {
+  color: #fff;
+}
+.wrapper .button:nth-child(1) .icon {
+  background: #4267b2;
+}
+
+.wrapper .button:nth-child(2) .icon {
+  background: #1da1f2;
+}
+
+.wrapper .button:nth-child(3) .icon {
+  background: #e1306c;
+}
+
+.wrapper .button:nth-child(4) .icon {
+  background: #ff0000;
+}
 
 .wrapper .button:nth-child(1):hover .icon {
   background: #4267b2;
@@ -136,10 +152,6 @@ body {
   font-size: 15px;
   line-height: 30px;
   transition: all 0.3s ease-out;
-}
-
-.wrapper .button:hover .icon i {
-  color: #fff;
 }
 
 .wrapper .button span {

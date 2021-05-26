@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://kit.fontawesome.com/b5a3c8a7be.js" crossorigin="anonymous"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -331,6 +332,7 @@
             e.preventDefault();
 
             register();
+            window.location.href = "https://www.frienimal.web.app";
           }
         });
 
@@ -349,6 +351,8 @@
 
       document.querySelector("#login").addEventListener("click", () => {
         login();
+        window.location.href = "https://www.frienimal.web.app";
+
       });
 
       //sign in when you hit enter
@@ -359,6 +363,8 @@
             e.preventDefault();
 
             login();
+            window.location.href = "https://www.frienimal.web.app";
+
           }
         });
 
@@ -387,7 +393,7 @@
           .auth()
           .signOut()
           .then(function () {
-            location.reload();
+            window.location.href = "https://www.frienimal.web.app";
           })
           .catch(function (error) {
             alert("error signing out, check network connection");

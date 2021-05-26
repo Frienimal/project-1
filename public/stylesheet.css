@@ -30,10 +30,11 @@ body {
 
 /* about us  */
 #about-title h2{
+  font-family: 'Pangolin', cursive !important;
   margin-bottom: 55px;
   margin-top: -25px;
   margin-left: 15px;
-  font-size: 2.9rem;
+  font-size: 3.0rem;
   font-weight: bold;
   color: #590219;
   text-transform: uppercase;
@@ -47,7 +48,7 @@ body {
   margin-top: 20px;
   margin-bottom: 25px;
   letter-spacing: .1;
-  font-style: italic;
+  font-style:normal;
 }
 #about-img img{
   margin: 0;
@@ -55,11 +56,12 @@ body {
   width: 78%;
   height: 65vh;
   margin-top: -80px;
-  filter: drop-shadow(30px 10px 4px #2670f8a2);
+  
 }
 
 /* pet cards  */
 #pets h2{
+  font-family: 'Pangolin', cursive !important;
   margin-top: 45px;
   margin-bottom: 55px;
   margin-left: 15px;
@@ -77,20 +79,24 @@ body {
   z-index:-1;
   border-radius: 25px;
   overflow:hidden;
+  text-decoration: none;
 }
 #dog-card:hover{
-  box-shadow: 0px 0px 30px #590219 ;
+  box-shadow: 0px 0px 40px #590219 ;
+  text-decoration: none;
   border: none;
   transition: .5s ease;
   cursor: pointer;
 }
 .custom-card{
   text-decoration: none;
-  
+
 }
 
 .custom-card:hover{
   text-decoration: none;
+  box-shadow: 0px 0px 40px #590219 ;
+
 }
 
 #card-img-top img{
@@ -136,11 +142,12 @@ body {
   height: 45vh;
   border: none;
   box-shadow: 0 0 30px #59021954;
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 40px 0;
 }
 
 #blog-title{
+  font-family: 'Pangolin', cursive !important;
   color: #590219;
   font-size: 2.9rem;
   text-transform: uppercase;
@@ -154,9 +161,11 @@ body {
   font-weight: bold;
 }
 #blog-info{
+  font-family: 'Pangolin', cursive !important;
   color: black;
   margin-top: 25px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 1 !important;
   margin-left: 15px;
   font-weight: 800;
 
@@ -181,12 +190,23 @@ body {
 }
 
 /* add button  */
-#add{
+.add-button{
   position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 5%;
-  background-color: none;
-  height: 10%;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  background-color: #fff;
+  border-radius: 50px;
+  justify-content: center;
+  background-color: #f7913e;
+}
+#add{
+  margin-top: 23%;
+  margin-left: 22%;
+  width: 45px;
+  height: 45px;
 
 }

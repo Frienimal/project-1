@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Add Pet</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+    <title>Pet Profile</title>
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/b5a3c8a7be.js"
-      crossorigin="anonymous"
-    ></script>
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -35,13 +31,6 @@
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use-->
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -50,67 +39,87 @@
     />
 
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="add-pet.css" />
+    <link rel="stylesheet" href="petprofile.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+    </style>
   </head>
   <body>
-    <div class="row">
-      <div class="col-lg-6 col-xs-12">
-        <div id="container">
-          <div><h2>Add a Pet</h2></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12">
+          <a href="index.html">
+            <img src="img/logo_final.png" alt="logo" id="logo" />
+          </a>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <h1 id="pname">
+            Kruzo
+            <h2><span class="badge">Thane, Maharashtra</span></h2>
+          </h1>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="dog-image">
+            <img src="img/pet1.jpg" alt="dog-img" id="dog-img" />
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12" id="dog-info">
+          <div class="container-fluid row">
+            <div class="col-lg-6 col-xs-6">
+              <h5 id="heading">Gender :</h5>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h6 id="gender">Male</h6>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h5 id="heading">Breed :</h5>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h6 id="breed">Retriever</h6>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h5 id="heading">Vaccinated :</h5>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h6 id="vacc">Yes</h6>
+            </div>
+            <div class="col-lg-6 col-xs-6">
+              <h5 id="heading">Description :</h5>
+            </div>
 
-          <form id="add-pets-form" method="POST">
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Petname"
-              placeholder="Pet name"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Type"
-              placeholder="Pet Type"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Vaccination"
-              placeholder="Vaccinated (Yes/No)"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Name"
-              placeholder="Name"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Email"
-              placeholder="Email"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="PhoneNo"
-              placeholder="Phone no"
-            />
-            <input
-              id="add-pet-field"
-              type="text"
-              name="Resi"
-              placeholder="Pet Residence"
-            />
-            <input type="file" id="photo" name="Image" />
-            <button>Submit</button>
-          </form>
+            <div class="col-lg-6 col-xs-6">
+              <h6 id="descr">
+                A 6 month-year old pup, who is cute and super fun. Is
+                well-trained, well-mannered and loyal. Loves to play with his
+                toys and calcium bones. He is allergic to milk and milk
+                prodducts. He likes to chase squirrels so please keep him away
+                from them.
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="container-fluid row">
+            <div class="col-xs-12 col-lg-12" style="width: 6rem">
+              <div>
+                <h4 id="heading">Owner's name : <span>Mihir</span></h4>
+              </div>
+            </div>
+            <div class="col-xs-12 col-lg-12">
+              <button type="button" class="btn" id="button1">
+                Call: 8828451000
+              </button>
+            </div>
+            <br />
+            <div class="col-xs-12 col-lg-12">
+              <button type="button" class="btn" id="button2">
+                Contact through mail
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6 col-xs-12" >
-        <img src="img/undraw_pet_adoption_2qkw.svg" alt="" />
-      </div>
     </div>
-
     <!-- Footer -->
     <section>
       <div class="footer-container">
@@ -184,49 +193,28 @@
     </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
 
     <script>
       // Your web app's Firebase configuration
-      // var firebaseConfig = {
-      //   apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
-      //   authDomain: "frienimal.firebaseapp.com",
-      //   databaseURL: "https://frienimal.firebaseio.com",
-      //   projectId: "frienimal",
-      //   storageBucket: "frienimal.appspot.com",
-      //   messagingSenderId: "264888471735",
-      //   appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
-      //   measurementId: "G-4BGZRKHGG6",
-      // };
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+        authDomain: "frienimal.firebaseapp.com",
+        databaseURL: "https://frienimal.firebaseio.com",
+        projectId: "frienimal",
+        storageBucket: "frienimal.appspot.com",
+        messagingSenderId: "264888471735",
+        appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+        measurementId: "G-4BGZRKHGG6",
+      };
       // Initialize Firebase
-
-      // firebase.initializeApp(firebaseConfig);
-
-      // const db = firebase.firestore();
-      //   db.settings({timestampInSnapshots: true});
-
-      //   function uploadImage(){
-      //   const ref = firebase.storage().ref()
-
-      //   const file = document.querySelector("#photo").files[0]
-
-      //   const name = new Date() + '-' + file.name
-
-      //   const metadata = {
-      //       contentType:file.type
-      //   }
-
-      //   const task = ref.child(name).put(file,metadata)
-
-      //   task
-      //   .then(snapshot => snapshot.ref.getDownloadURL())
-      //   .then(url => {
-      //       console.log(url)
-      //       alert("Image uploaded")
-      //     }
-      //   )
-      // }
+      firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="app.js"></script>
+
+    <script></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"

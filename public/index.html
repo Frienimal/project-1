@@ -10,27 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    
 
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/91635e0656.js"></script> -->
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.0.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.0.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
 
     <link
       rel="stylesheet"
@@ -43,8 +27,8 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://use.fontawesome.com/cc8803b80a.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/e157f41776.js" crossorigin="anonymous"></script> -->
+    
+    
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -63,28 +47,34 @@
       crossorigin="anonymous"
     />
 
+    <script src="https://kit.fontawesome.com/b5a3c8a7be.js" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+  </style>
     <link rel="stylesheet" href="stylesheet.css" />
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
-   <a href="add-pet.html"><img src="img/solid-add.png" alt="add-icon" id="add"></a>
+    <div class="add-button">
+      <a href="add-pet.html"><img src="img/plus-solid.svg" alt="add-icon" id="add"></a>
+    </div>
+  
     <section>
       <header>
         <nav>
           <div class="menu-icon">
-            <i class="fa fa-bars fa-2x"></i>
+            <img src="img/bars-solid.svg" alt="" style="color: aliceblue;">
           </div>
           <div class="logo">
             <img id="logo1" src="img/logo_final.png" />
           </div>
           <div class="menu">
             <ul>
-              <li><a href="index.html">About</a></li>
-              <!-- <li><a href="blogs.html">Blog</a></li> -->
               <li><a href="pets.html">Our Pets</a></li>
               <li><a href="blogs.html">Blog</a></li>
-              <li><a href="tp.html">Login</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="signup.html">Login</a></li>
             </ul>
           </div>
         </nav>
@@ -109,7 +99,7 @@
           </div>
         </div>
         <div class="col-lg-6" id="about-img">
-          <img src="img/dog in arms.png" alt="about-us-image" />
+          <img src="img/undraw_good_doggy_4wfq.svg" alt="about-us-image" />
         </div>
       </div>
     </section>
@@ -123,39 +113,42 @@
         </div>
         <div class="row">
           <div class="col-lg-4 col-xs-12">
-            <a href="petprofile.html" class="custom-card">
+            <a href="petprofile-oreo.html" class="custom-card">
               <div class="card" id="dog-card">
                 <div  id="card-img-top" ><img src="img/beagle.jpg" id="img1"></div>
                 <div id="frLogo" ><img src="img/logo_final.png" alt="logo" id="imgLogo"></div>
                 <div class="card-body">
-                  <h5 class="card-title">Musko</h5>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem accusamus porro, consequuntur illum labore reiciendis rerum, inventore dolore earum vitae explicabo sunt nemo. Nam, est! Similique fuga obcaecati at quod.</p>
+                  <h5 class="card-title">Oreo</h5>
+                  <p class="card-text">A well-mannered, well-trained husky who likes to play fetch and tug.
+                    He is lactose intolerant and has completed all sets of vaccinations.
+                    A 4-year old active doggo who enjoys the company of people.
+                    He likes to chase squirrels so please keep him away from them.</p>
                 </div>
               </div>
             </a>
             
           </div>
           <div class="col-lg-4 col-xs-12">
-            <a href="petprofile.html" class="custom-card">
+            <a href="petprofile-milo.html" class="custom-card">
               <div class="card" id="dog-card">
                 <div  id="card-img-top" ><img src="img/husky.jpg" id="img1"></div>
                 <div id="frLogo" ><img src="img/logo_final.png" alt="logo" id="imgLogo"></div>
                 <div class="card-body">
-                  <h5 class="card-title">Musko</h5>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem accusamus porro, consequuntur illum labore reiciendis rerum, inventore dolore earum vitae explicabo sunt nemo. Nam, est! Similique fuga obcaecati at quod.</p>
+                  <h5 class="card-title">Milo</h5>
+                  <p class="card-text">A super-active, playful doggo. Allergic to fruits and ice-cream. 3 months old, vaccinations pending. Also likes to engage with people and loves to play fetch and hide and seek. Will tire keep you on your heels throughout the day. </p>
                 </div>
               </div>
             </a>
             
           </div>
           <div class="col-lg-4 col-xs-12">
-            <a href="petprofile.html" class="custom-card">
+            <a href="petprofile-kruzo.html" class="custom-card">
               <div class="card" id="dog-card">
-                <div  id="card-img-top" ><img src="img/beagle.jpg" id="img1"></div>
+                <div  id="card-img-top" ><img src="img/pet1.jpg" id="img1"></div>
                 <div id="frLogo" ><img src="img/logo_final.png" alt="logo" id="imgLogo"></div>
                 <div class="card-body">
-                  <h5 class="card-title">Musko</h5>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem accusamus porro, consequuntur illum labore reiciendis rerum, inventore dolore earum vitae explicabo sunt nemo. Nam, est! Similique fuga obcaecati at quod.</p>
+                  <h5 class="card-title">Kruzo</h5>
+                  <p class="card-text">A 6 month-year old pup, who is cute and super fun. Is well-trained, well-mannered and loyal. Loves to play with his toys and calcium bones. He is allergic to milk and milk prodducts.He likes to chase squirrels so please keep him away from them.</p>
                 </div>
               </div>
             </a>
@@ -218,26 +211,26 @@
 
             <div class="wrapper">
               <div class="button">
-                <div class="icon">
-                  <i class="fab fa-facebook-f"></i>
+                <div class="icon" >
+                  <img src="img/facebook-f-brands.svg" alt="" style="width: 18px; height: 18px; ">
                 </div>
-                <span>Facebook</span>
+                <spa>Facebook</span>
               </div>
               <div class="button">
                 <div class="icon">
-                  <i class="fab fa-twitter"></i>
+                  <img src="img/twitter-brands.svg" alt="" style="width: 18px; height: 18px;">
                 </div>
                 <span>Twitter</span>
               </div>
               <div class="button">
                 <div class="icon">
-                  <i class="fab fa-instagram"></i>
+                 <img src="img/instagram-brands.svg" alt="" style="width: 18px; height: 18px;  ">
                 </div>
                 <span>Instagram</span>
               </div>
               <div class="button">
                 <div class="icon">
-                  <i class="fab fa-youtube"></i>
+                  <img src="img/youtube-brands.svg" alt="" style="width: 18px; height: 18px; ">
                 </div>
                 <span>YouTube</span>
               </div>

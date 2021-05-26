@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/b5a3c8a7be.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="footer.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+      #form-cont {
+        margin-top: 70px;
+        margin-left: 30px;
+        margin-right: 30px;
+        border: 2px solid #590219;
+        border-radius: 25px;
+        width: 90%;
+        height: 85vh;
+        justify-content: center;
+        justify-items: center;
+      }
+      #form-cont div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #form-cont div h2 {
+        font-family: "Pangolin", cursive;
+        color: rgb(36, 36, 36);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .col-xs-12 #contact-us {
+        display: block;
+        justify-items: center;
+      }
+      #contact-us input {
+        width: 60%;
+        height: 45px;
+        margin-top: 20px;
+        padding: 1px 10px;
+        margin-left: 21%;
+        border: none;
+        border-bottom: 3px solid #590219;
+      }
+      input:focus {
+        outline: none;
+        border-bottom: 3px solid #590219;
+      }
+      ::placeholder {
+        margin-left: 20px;
+        font-family: "Roboto", sans-serif;
+      }
+      textarea {
+        height: 120px;
+        padding: 10px 10px;
+        width: 60%;
+        margin-left: 21%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border: 2px solid #590219;
+      }
+      textarea:-ms-input-placeholder:-moz-placeholder::placeholder {
+        margin: 30px;
+      }
+      textarea:focus {
+        border: 2px solid #d46a13;
+        outline: none;
+      }
+
+      button {
+        border: none;
+        border-bottom: none !important;
+        width: 150px;
+        height: 40px;
+        margin-left: 40%;
+        background: #f7913e;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .forms-in button:hover {
+        opacity: 0.7;
+      }
+      .hide {
+        display: none;
+      }
+      .col-lg-6 {
+        height: 100vh;
+        width: 100vw;
+      }
+      #loginimg {
+        width: 400px;
+        height: 400px;
+        margin-left: 25%;
+        margin-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid row">
+      <div class="col-lg-6 col-xs-12">
+        <div class="row" id="form-cont">
+          <div class="col-xs-12">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="col-xs-12">
+            <form id="contact-us" method="POST">
+              <input type="text" placeholder="Enter your name" name="Name" />
+              <input type="email" placeholder="Enter your email" name="Email" />
+              <input
+                type="tel"
+                maxlength="10"
+                placeholder="Enter your contact number"
+                name="Phone"
+              />
+              <textarea
+                name="Grievance"
+                id="comp"
+                cols="30"
+                rows="10"
+                placeholder="Enter complaint"
+              ></textarea>
+              <button>Submit</button>
+            </form>
+          </div>
+          <div class="col-xs-12">
+            <p>Please expect a reply from our team in 1 to 2 hours.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6 col-xs-12 d-none d-sm-block"
+        style="background-color: #f7913e"
+      >
+        <img
+          src="img/undraw_informed_decision_p2lh.svg"
+          alt="login"
+          id="loginimg"
+        />
+      </div>
+    </div>
+    <!-- Footer -->
+    <section>
+      <div class="footer-container">
+        <div class="footer">
+          <img class="footer-logo" src="img\logo_final.png" alt="" />
+          <div class="tag">
+            <h1 class="logoname1">Frienimal</h1>
+            <p class="tagline">Adopt a Forever Friend today!</p>
+          </div>
+          <div class="footer-heading footer-1">
+            <h2>About us</h2>
+            <a href="blogs.html">BLOG</a>
+            <a href="#">Contributors</a>
+            <a href="#">Foster Homes</a>
+            <a href="#">Terms of service</a>
+          </div>
+
+          <div class="footer-heading footer-2">
+            <h2>Contact us</h2>
+            <a href="#">Jobs</a>
+            <a href="#">Support</a>
+            <a href="#">Sponsorships</a>
+          </div>
+
+          <div class="footer-email-form" id="signup">
+            <h2>Join our newsletter</h2>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              id="footer-email"
+            />
+            <input
+              type="Submit"
+              value="Sign Up"
+              onclick="signup()"
+              id="footer-email-btn"
+            />
+
+            <br /><br />
+
+            <div class="wrapper">
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>Facebook</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <span>Twitter</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+              </div>
+              <div class="button">
+                <div class="icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <span>YouTube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
+        authDomain: "frienimal.firebaseapp.com",
+        databaseURL: "https://frienimal.firebaseio.com",
+        projectId: "frienimal",
+        storageBucket: "frienimal.appspot.com",
+        messagingSenderId: "264888471735",
+        appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
+        measurementId: "G-4BGZRKHGG6",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+      //invokes firebase authentication.
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const form = document.querySelector("#contact-us");
+      form.addEventListener("submit", (e) => {
+        db.collection("Grievances").add({
+          name: form.Name.value,
+          email: form.Email.value,
+          phone: form.Phone.value,
+          grievance: form.Grievance.value,
+        });
+        console.log("Complaint registered....");
+      });
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
