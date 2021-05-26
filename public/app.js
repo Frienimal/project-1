@@ -29,14 +29,14 @@ function renderPetInfo(doc) {
   li.appendChild(Email);
   li.appendChild(Name);
   li.appendChild(Phone_no);
-  li.appendChild(cross);
+  
 
   //deleting data
-  cross.addEventListener("click", (e) => {
-    e.stopPropagation();
-    let id = e.target.parentElement.getAttribute("data-id");
-    db.collection("PetForm").doc(id).delete();
-  });
+  // cross.addEventListener("click", (e) => {
+  //   e.stopPropagation();
+  //   let id = e.target.parentElement.getAttribute("data-id");
+  //   db.collection("PetForm").doc(id).delete();
+  // });
 
   PetInfo.appendChild(li);
 }
@@ -44,9 +44,7 @@ function renderPetInfo(doc) {
 // getting data
 //add .where() to for queries
 //orderby() for displaying data in an order
-db.collection("PetForm")
-  .get()
-  .then((Snapshot) => {
+db.collection("PetForm").get().then((Snapshot) => {
     Snapshot.docs.forEach((doc) => {
       renderPetInfo(doc);
     });
@@ -64,70 +62,12 @@ form2.addEventListener("submit", (e) => {
     PhoneNo: form2.PhoneNo.value,
     PetResidence: form2.Resi.value,
   });
-  form2.Petname.value = "";
-  form2.Type.value = "";
-  form2.Vaccination.value = "";
-  form2.Name.value = "";
-  form2.Email.value = "";
-  form2.PhoneNo.value = "";
-  form2.Resi.value = "";
+  form2.Petname.value = '';
+  form2.Type.value = '';
+  form2.Vaccination.value = '';
+  form2.Name.value = '';
+  form2.Email.value = '';
+  form2.PhoneNo.value = '';
+  form2.Resi.value = '';
 });
 
-//Google Login
-
-function googlelogin() {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  firebase
-    .auth()
-    .signInWithPopup(provider)
-
-    .then((result) => {
-      const user = result.user;
-      window.alert(`Hello ${user.displayName}`);
-      document.querySelector("#A1").textContent = `${user.displayName}`;
-      console.log(user);
-    })
-    .catch(console.log);
-}
-
-//Newsletter SignUp (Saving user Content to Database)
-
-const form = document.querySelector("#add-signup-form");
-
-//saving form
-function signup() {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    db.collection("Email").add({
-      email: form.email.value,
-    });
-    form.email.value = "";
-  });
-}
-
-var firebaseConfig = {
-  apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
-  authDomain: "frienimal.firebaseapp.com",
-  databaseURL: "https://frienimal.firebaseio.com",
-  projectId: "frienimal",
-  storageBucket: "frienimal.appspot.com",
-  messagingSenderId: "264888471735",
-  appId: "1:264888471735:web:b0dce2f4206e31994e3d32",
-  measurementId: "G-4BGZRKHGG6",
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-function signUp() {
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
-
-  const promise = auth.createUserWithEmailAndPassword(
-    email.value,
-    password.value
-  );
-  promise.catch((e) => alert(e.message));
-
-  alert("Signed Up");
-}
