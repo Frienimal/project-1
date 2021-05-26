@@ -1,6 +1,3 @@
-// const db = firebase.firestore();
-
-//Goog
 var firebaseConfig = {
   apiKey: "AIzaSyCLTQaJIOwSqjmStSlQhl_1YEU0GX3pryw",
   authDomain: "frienimal.firebaseapp.com",
@@ -14,10 +11,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
-var db = firebase.firestore();
+const db = firebase.firestore();
+
 function signUp() {
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
 
   const promise = auth.createUserWithEmailAndPassword(
     email.value,
@@ -85,15 +83,12 @@ db.collection("PetForm")
 //Saving Data
 function uploadImage(){
   const ref = firebase.storage().ref()
-
   const file = document.querySelector("#photo").files[0]
-
   const name = new Date() + '-' + file.name
-
   const metadata = {
       contentType:file.type
   }
-
+ 
   const task = ref.child(name).put(file,metadata)
 
   task

@@ -84,8 +84,14 @@ body {
   transition: .5s ease;
   cursor: pointer;
 }
+.custom-card{
+  text-decoration: none;
+  
+}
 
-
+.custom-card:hover{
+  text-decoration: none;
+}
 
 #card-img-top img{
   left: 0;
