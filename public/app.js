@@ -57,14 +57,14 @@ function renderPetInfo(doc) {
   li.appendChild(Email);
   li.appendChild(Name);
   li.appendChild(Phone_no);
-  li.appendChild(cross);
+  
 
   //deleting data
-  cross.addEventListener("click", (e) => {
-    e.stopPropagation();
-    let id = e.target.parentElement.getAttribute("data-id");
-    db.collection("PetForm").doc(id).delete();
-  });
+  // cross.addEventListener("click", (e) => {
+  //   e.stopPropagation();
+  //   let id = e.target.parentElement.getAttribute("data-id");
+  //   db.collection("PetForm").doc(id).delete();
+  // });
 
   PetInfo.appendChild(li);
 }
@@ -72,9 +72,7 @@ function renderPetInfo(doc) {
 // getting data
 //add .where() to for queries
 //orderby() for displaying data in an order
-db.collection("PetForm")
-  .get()
-  .then((Snapshot) => {
+db.collection("PetForm").get().then((Snapshot) => {
     Snapshot.docs.forEach((doc) => {
       renderPetInfo(doc);
     });
@@ -113,12 +111,12 @@ form2.addEventListener("submit", (e) => {
     PetResidence: form2.Resi.value,
     Image:form2.Image.value
   });
-  form2.Petname.value = "";
-  form2.Type.value = "";
-  form2.Vaccination.value = "";
-  form2.Name.value = "";
-  form2.Email.value = "";
-  form2.PhoneNo.value = "";
-  form2.Resi.value = "";
-  form2.Image.value = image.src;
+  form2.Petname.value = '';
+  form2.Type.value = '';
+  form2.Vaccination.value = '';
+  form2.Name.value = '';
+  form2.Email.value = '';
+  form2.PhoneNo.value = '';
+  form2.Resi.value = '';
 });
+
