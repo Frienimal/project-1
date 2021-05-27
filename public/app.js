@@ -57,7 +57,7 @@ form2.addEventListener("submit", (e) => {
     PetImage:form2.Image.value,
   });
   console.log('Completed');
-  window.location.href = "https://www.frienimal.web.app/pets.html";
+  // window.location.href = "https://www.frienimal.web.app/pets.html";
   // form2.Petname.value = '';
   // form2.Type.value = '';
   // form2.Vaccination.value = '';

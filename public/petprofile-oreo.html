@@ -47,6 +47,8 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
     </style>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -116,7 +118,7 @@
             </div>
             <br />
             <div class="col-xs-12 col-lg-12">
-              <button type="button" class="btn" id="button2">
+              <button type="button" class="btn" id="button2" onclick="sendEmail()">
                 Contact through mail
               </button>
             </div>
@@ -218,7 +220,25 @@
       firebase.initializeApp(firebaseConfig);
     </script>
 
-    <script></script>
+    <script>
+      
+      function sendEmail(){
+        Email.send({
+        SecureToken:"914ce5ba-f356-4f96-b582-d8a401855632", 
+        // Host : "smtp.gmail.com",
+        // Username : "sunilcheulkar@gmail.com",
+        // Password : "Pscheulkar@12",
+        To : 'pscheulkar12@gmail.com',
+        From : "sunilcheulkar@gmail.com",
+        Subject : "Regarding Pet Adoption Request",
+        Body : "I would like to adopt your pet Oreo. Please revert back to me for further discussion.",
+        }).then(
+        message => alert(message)
+        
+        );
+        console.log("Done");
+      }
+    </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
